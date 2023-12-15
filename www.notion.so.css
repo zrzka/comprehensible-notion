@@ -1,0 +1,40 @@
+/*
+ * Make Notion readable, easily scannable, and less distracting.
+ * Light theme based.
+ */
+
+/*
+ * Mentions.
+ */
+.notion-page-mention-token > span:not(.notion-page-mention-token__title),
+.notion-text-mention-token > span:not(.notion-page-mention-token__title) {
+    /* No icons, sorry. */
+    display:none;
+}
+
+.notion-page-mention-token__title {
+    /* No bold titles, sorry. */
+    font-weight: inherit !important;
+}
+
+/*
+ * Icons.
+ */
+.notion-record-icon {
+    /* Grayscale, not a coloring book, sorry. */
+    -webkit-filter: grayscale(1);
+}
+
+/*
+ * Comments yes, but less intrusive.
+ *
+ * A lot of possibilities - `span`, `a`, class set, not set, ...
+ */
+*[style^="background:rgba(255,212,0,.14)"], .discussion-level-1 {
+    /* No background, sorry. */
+    background: inherit !important;
+
+    /* Less intrusive underline, sorry. */
+    border-bottom: 2px dotted rgba(255, 212, 0, .40) !important;
+    padding-bottom: 2px !important;
+}
